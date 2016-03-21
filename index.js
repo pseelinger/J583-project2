@@ -11,16 +11,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 //Actual Site
 
-//posts Page
+//Posts List Page
 app.get( '/posts', posts.list);
-//posts Creation Page
-app.get('/posts/new', posts.form)
-
+//Post Creation Page
+app.get('/post/new', posts.form)
 app.post('/posts', posts.create);
-
-app.post('/posts/:id', posts.update);
-app.get('/posts/:id', posts.show);
+//Post Update Page
+app.post('/posts/edit/:id', posts.update);
+app.get('/posts/edit/:id', posts.show);
 app.get('/posts/delete/:id', posts.remove);
+//Post Page on Site
+app.get('/posts/:id', posts.display);
 // Connect to the MongoDB database
 db.connect('mongodb://localhost:27017/test', function(){
   console.log("MongoDB Connected");

@@ -6,7 +6,7 @@
 <body>
   <h3><%= posts.name %></h3>
        <p><a href="/posts/delete/<%= posts.link %>">Delete</a></p>
-       <form action="/posts/<%= posts.link %>" method="POST">
+       <form action="/posts/edit/<%= posts.link %>" method="POST">
 
            <p>
            <label>Post Name</label>

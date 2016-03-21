@@ -18,7 +18,7 @@ exports.update = function(req, res) {
 
     //note about xss and sanitization
     collection.updateOne(
-        {name: req.params.id},
+        {link: req.params.id},
         {
             $set: {
               name: req.body.name ,
@@ -55,8 +55,15 @@ exports.remove = function(req, res) {
 
     //note about xss and sanitization
     collection.removeOne({
-        name: req.params.id
+        link: req.params.id
     });
 
     return res.redirect('/posts');
+};
+exports.display = function(req, res){
+  var collection = db.get().collection('posts');
+
+  collection.find({"link": req.params.id}).limit(1).toArray(function(err, results) {
+      res.render('posts/display', {posts: results[0]});
+  });
 };
