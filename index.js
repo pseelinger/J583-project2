@@ -9,18 +9,17 @@ var posts = require('./controllers/posts')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
-//Actual Site
 
 //Posts List Page
 app.get( '/posts', posts.list);
 //Post Creation Page
 app.get('/post/new', posts.form)
 app.post('/posts', posts.create);
-//Post Update Page
+//Post's Update Page
 app.post('/posts/edit/:id', posts.update);
 app.get('/posts/edit/:id', posts.show);
 app.get('/posts/delete/:id', posts.remove);
-//Post Page on Site
+//Post's Page on Site
 app.get('/posts/:id', posts.display);
 // Connect to the MongoDB database
 db.connect('mongodb://localhost:27017/test', function(){

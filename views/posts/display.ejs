@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Posts</title>
+  <title><%= posts.name %></title>
 </head>
 <body>
   <h1><%= posts.name %></h1>
+  <h2>By <%= posts.author %> <%= posts.date %></h2>
+  <p><%= posts.content %></p>
+  <% posts.image %>
+  <a href="/posts/edit/<%= posts.link %>">Edit post</a>
 </body>
 </html>
