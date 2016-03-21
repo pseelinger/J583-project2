@@ -9,7 +9,7 @@ exports.list = function(req, res){
 exports.show = function(req, res) {
     var collection = db.get().collection('posts');
 
-    collection.find({"slug": req.params.id}).limit(1).toArray(function(err, results) {
+    collection.find({"link": req.params.id}).limit(1).toArray(function(err, results) {
         res.render('posts/show', {posts: results[0]});
     });
 };
