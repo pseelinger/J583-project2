@@ -8,7 +8,7 @@
   <% if (posts.length > 0) { %>
     <ul>
       <% for(var i in posts){ %>
-        <li><%= posts[i].name %></li>
+        <li><a href="<% posts.link %>"><%= posts[i].name %></a></li>
         <% } %>
         <% }else{ %>
         <p>no posts to show</p>

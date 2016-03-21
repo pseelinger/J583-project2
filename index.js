@@ -10,15 +10,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 //Actual Site
-app.get('/', function(req, res){
-  res.render('index', posts.list)
-});
+
 //Posts Page
 app.get( '/posts', posts.list);
 //Post Creation Page
 app.get('/post/new', posts.form)
 
 app.post('/posts', posts.create);
+
+app.post('/post/:id', posts.update);
+app.get('/post/:id', posts.show);
+app.get('/post/delete/:id', posts.remove);
 // Connect to the MongoDB database
 db.connect('mongodb://localhost:27017/test', function(){
   console.log("MongoDB Connected");

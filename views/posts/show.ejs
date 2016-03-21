@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts</title>
+</head>
+<body>
+  <h3><%= posts.name %></h3>
+       <p><a href="/posts/delete/<%= posts.name %>">Delete</a></p>
+       <form action="/posts/<%= posts.name %>" method="POST">
+
+           <p>
+           <label>Post Name</label>
+           <input type="text" id="name" name="name" value="<%= posts.name %>" />
+           </p>
+
+           <p>
+           <label>Author</label>
+           <input type="text" id="author" name="author" value="<%= posts.author %>" />
+           </p>
+
+           <p>
+           <label>Category</label>
+           <input type="text" id="category" name="category" value="<%= posts.category %>" />
+           </p>
+
+           <p>
+           <label>Content</label>
+           <input type="text" id="content" name="content" value="<%= posts.content %>" />
+           </p>
+
+           <p>
+           <label>Thumbnail Image</label>
+           <input type="file" id="image" name="image" value="<%= posts.image %>" />
+           </p>
+
+           <p>
+           <label>Date</label>
+           <input type="datetime-local" id="date" name="date" value="<%= posts.date %>" />
+           </p>
+
+           <p>
+           <label>Slug</label>
+           <input type="text" id="link" name="link" value="<%= posts.link %>" />
+           </p>
+
+           <button>Update</button>
+
+       </form>
+</body>
+</html>

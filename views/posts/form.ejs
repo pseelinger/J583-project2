@@ -8,27 +8,31 @@
 <form method = "POST" action = "/posts">
   <p>
     <label>Post Name</label>
-    <input type = "text" name ="name" value = "" />
+    <input type = "text" name ="name" id="name" value = "" />
   </p>
   <p>
     <label>Post Author</label>
-    <input type = "text" name ="author" value = "" />
+    <input type = "text" name ="author" id="author" value = "" />
   </p>
   <p>
     <label>Post Category</label>
-    <input type = "text" name ="category" value = "" />
+    <input type = "text" name ="category" id="category" value = "" />
   </p>
   <p>
     <label>Content</label>
-    <input type = "text" name ="content" value = "" />
+    <input type = "text" name ="content" id="content" value = "" />
   </p>
   <p>
     <label>Thumbnail Image</label>
-    <input type = "file" name ="image" value = "" />
+    <input type = "file" name ="image" id="image" value = "" />
   </p>
   <p>
     <label>Date</label>
-    <input type = "datetime-local" name ="date" value = "" />
+    <input type = "datetime-local" name ="date" id="date" value = "" />
+  </p>
+  <p>
+    <label>Slug</label>
+    <input type = "text" name ="link" id="link" value = "" />
   </p>
   <button>Create Post</button>
 </form>
