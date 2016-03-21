@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create a Post</title>
+</head>
+<body>
+<h1>Create New Post</h1>
+<form method = "POST" action = "/posts">
+  <p>
+    <label>Post Name</label>
+    <input type = "text" name ="name" value = "" />
+  </p>
+  <p>
+    <label>Post Author</label>
+    <input type = "text" name ="author" value = "" />
+  </p>
+  <p>
+    <label>Post Category</label>
+    <input type = "text" name ="category" value = "" />
+  </p>
+  <p>
+    <label>Content</label>
+    <input type = "text" name ="content" value = "" />
+  </p>
+  <p>
+    <label>Thumbnail Image</label>
+    <input type = "file" name ="image" value = "" />
+  </p>
+  <p>
+    <label>Date</label>
+    <input type = "datetime-local" name ="date" value = "" />
+  </p>
+  <button>Create Post</button>
+</form>
+</body>
+</html>

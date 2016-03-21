@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts</title>
+</head>
+<body>
+  <h1>Your Posts</h1>
+  <% if (posts.length > 0) { %>
+    <ul>
+      <% for(var i in posts){ %>
+        <li><%= posts[i].name %></li>
+        <% } %>
+        <% }else{ %>
+        <p>no posts to show</p>
+        <% } %>
+    </ul>
+    <p><a href="/post/new">Create new post</a></p>
+</body>
+</html>
