@@ -2,10 +2,17 @@
 <html>
 <head>
   <title>Posts</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/general.css" type="text/css" />
 </head>
 <body>
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-sm-12">
+  <h1>Edit Post</h1>
   <h3><%= posts.name %></h3>
-       <p><a href="/posts/delete/<%= posts.link %>">Delete</a></p>
+       <a href="/posts/delete/<%= posts.link %>"><button class="btn btn-danger">Delete</button></a>
+       <a href="/posts"><button class="btn btn-primary">Cancel</button></a>
        <form action="/posts/edit/<%= posts.link %>" method="POST">
 
            <p>
@@ -25,17 +32,17 @@
 
            <p>
            <label>Content</label>
-           <input type="text" id="content" name="content" value="<%= posts.content %>" />
+           <textarea type="text" id="content" name="content" rows="15" cols="100" value="<%= posts.content %>"><%= posts.content %></textarea>
            </p>
 
            <p>
            <label>Thumbnail Image</label>
-           <input type="file" id="image" name="image" value="<%= posts.image %>" />
+           <input type="text" id="image" name="image" value="<%= posts.image %>" />
            </p>
 
            <p>
            <label>Date</label>
-           <input type="datetime-local" id="date" name="date" value="<%= posts.date %>" />
+           <input type="date" id="date" name="date" value="<%= posts.date %>" />
            </p>
 
            <p>
@@ -43,8 +50,12 @@
            <input type="text" id="link" name="link" value="<%= posts.link %>" />
            </p>
 
-           <button>Update</button>
+           <button class="btn btn-success">Update</button>
 
        </form>
+     </div>
+     </div>
+     </div>
+  <script src="/js/form.js"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Lemon Milk";
+  src: url(/fonts/LemonMilk.otf);
+}
+@font-face {
+  font-family: Ahellya;
+  src: url(/fonts/ahellya.ttf);
+}
+h1{
+  font-family: "Lemon Milk";
+}
+button a, button a:hover{
+  color: white;
+  text-decoration: none;
+}
+table, table a{
+  color: blue;
+}
+input, textarea{
+  display: block;
+}
+pre{
+  font-family: Ahellya;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding: 0;
+}
+#thumbnail-image{
+  height: 25em;
+}

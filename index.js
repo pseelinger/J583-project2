@@ -8,6 +8,7 @@ var posts = require('./controllers/posts')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 //Posts List Page

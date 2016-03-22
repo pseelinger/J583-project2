@@ -2,12 +2,26 @@
 <html>
 <head>
   <title><%= posts.name %></title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/general.css" type="text/css" />
 </head>
 <body>
-  <h1><%= posts.name %></h1>
-  <h2>By <%= posts.author %> <%= posts.date %></h2>
-  <p><%= posts.content %></p>
-  <% posts.image %>
-  <a href="/posts/edit/<%= posts.link %>">Edit post</a>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1><%= posts.name %></h1>
+        <h2>By <%= posts.author %> <%= posts.date %></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <% if (posts.image){ %>
+        <img id="thumbnail-image" src="<%= posts.image %>" alt="thumbnail image">
+        <% } %>
+        <pre><%= posts.content %></pre>
+        <a href="/posts/edit/<%= posts.link %>">Edit post</a>
+      </div>
+    </div>
+</div>
 </body>
 </html>
