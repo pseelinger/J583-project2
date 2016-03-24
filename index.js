@@ -13,6 +13,7 @@ app.set('view engine', 'ejs');
 
 //Posts List Page
 app.get( '/posts', posts.list);
+app.get('/posts/categories/:id', posts.categories);
 //Post Creation Page
 app.get('/post/new', posts.form)
 app.post('/posts', posts.create);

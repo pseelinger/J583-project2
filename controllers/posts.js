@@ -67,3 +67,9 @@ exports.display = function(req, res){
       res.render('posts/display', {posts: results[0]});
   });
 };
+
+exports.categories = function(req, res){
+  collection.find({"category": req.params.id}).toArray(function(err, results){
+    res.render('posts/list', {posts: results});
+  });
+};

@@ -8,7 +8,7 @@
   <script src="/js/jquery-min.js"></script>
 </head>
 <body>
-  <% var catSelected = ""; var cats = []; %>
+  <% var cats = []; %>
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
@@ -29,8 +29,8 @@
           };
           for(var z in uniqueCats){
         %>
-        <li><a onclick="catSelected = <%= uniqueCats[z] %>" href="#" id="<%= uniqueCats[z] %>"><%= uniqueCats[z] %></a></li>
-      <% } console.log(catSelected); %>
+        <li><a href="/posts/categories/<%= uniqueCats[z] %>"><%= uniqueCats[z] %></a></li>
+      <% }; %>
       </ul>
     </div>
   <% if (posts.length > 0) { %>
@@ -40,23 +40,21 @@
         <th>View</th>
         <th>Date</th>
       </tr>
-      <% for(var j in posts){
-        if(catSelected == posts[j].category){
-        %>
+      <% for(var j in posts){  %>
         <tr>
           <td><a href="/posts/edit/<%= posts[j].link %>"><%= posts[j].name %></a></td>
           <td><a href="/posts/<%= posts[j].link %>">View</a></td>
           <td><%= posts[j].date %></td>
         </tr>
-        <% }} %>
+        <% } %>
         <% }else{ %>
         <p>no posts to show</p>
-        <% } %>
+        <% }  %>
     </table>
   </div>
   </div>
     <button class="btn btn-primary"><a href="/post/new">Create new post</a></button>
   </div>
-    <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
