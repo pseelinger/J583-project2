@@ -4,24 +4,51 @@
   <title>Posts</title>
   <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="/css/general.css" type="text/css" />
+
+  <script src="/js/jquery-min.js"></script>
 </head>
 <body>
+  <% var catSelected = ""; var cats = []; %>
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
   <h1>Your Posts</h1>
+  <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Category
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <% for (var i in posts) {
+          var newCat = posts[i].category;
+          cats.push(newCat);
+        };
+          var uniqueCats = [];
+          for(var k in cats){
+              if(uniqueCats.indexOf(cats[k]) < 0){
+                uniqueCats.push(cats[k]);
+              };
+          };
+          for(var z in uniqueCats){
+        %>
+        <li><a onclick="catSelected = <%= uniqueCats[z] %>" href="#" id="<%= uniqueCats[z] %>"><%= uniqueCats[z] %></a></li>
+      <% } console.log(catSelected); %>
+      </ul>
+    </div>
   <% if (posts.length > 0) { %>
     <table class="table table-striped table-hover table-responsive">
       <tr>
         <th>Post Name</th>
         <th>View</th>
+        <th>Date</th>
       </tr>
-      <% for(var i in posts){ %>
+      <% for(var j in posts){
+        if(catSelected == posts[j].category){
+        %>
         <tr>
-          <td><a href="/posts/edit/<%= posts[i].link %>"><%= posts[i].name %></a></td>
-          <td><a href="/posts/<%= posts[i].link %>">View</a></td>
+          <td><a href="/posts/edit/<%= posts[j].link %>"><%= posts[j].name %></a></td>
+          <td><a href="/posts/<%= posts[j].link %>">View</a></td>
+          <td><%= posts[j].date %></td>
         </tr>
-        <% } %>
+        <% }} %>
         <% }else{ %>
         <p>no posts to show</p>
         <% } %>
@@ -30,5 +57,6 @@
   </div>
     <button class="btn btn-primary"><a href="/post/new">Create new post</a></button>
   </div>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

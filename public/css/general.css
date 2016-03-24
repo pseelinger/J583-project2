@@ -3,29 +3,50 @@
   src: url(/fonts/LemonMilk.otf);
 }
 @font-face {
-  font-family: Ahellya;
-  src: url(/fonts/ahellya.ttf);
+  font-family: "Roman Serif";
+  src: url(/fonts/romanserif.ttf);
 }
 h1{
   font-family: "Lemon Milk";
+  font-size: 3.75em;
+}
+h2{
+  font-family: "Roman Serif";
+  font-size: 2.25em;
+
+}
+.byline{
+  font-size: 1em;
+  font-family: "Roman Serif";
 }
 button a, button a:hover{
   color: white;
   text-decoration: none;
+  margin-bottom: 5px;
 }
 table, table a{
   color: blue;
+  font-size: 1.25em;
 }
 input, textarea{
   display: block;
 }
 pre{
-  font-family: Ahellya;
+  font-family: "Roman Serif";
   background: none;
   border: none;
-  font-size: 1em;
+  font-size: 1.75em;
   padding: 0;
+  white-space: pre-line;
+  word-break: normal;
+  line-height: 1.5;
+}
+input[type=date]{
+  line-height: normal;
 }
 #thumbnail-image{
-  height: 25em;
+  width: 100%;
+  max-width: 750px;
+  left: 0;
+  right: 0;
 }

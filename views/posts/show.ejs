@@ -10,52 +10,52 @@
     <div class="row">
     <div class="col-sm-12">
   <h1>Edit Post</h1>
-  <h3><%= posts.name %></h3>
-       <a href="/posts/delete/<%= posts.link %>"><button class="btn btn-danger">Delete</button></a>
-       <a href="/posts"><button class="btn btn-primary">Cancel</button></a>
        <form action="/posts/edit/<%= posts.link %>" method="POST">
-
+         <div class="col-lg-2 col-md-6">
            <p>
-           <label>Post Name</label>
+           <label><h2>Post Name</h2></label>
            <input type="text" id="name" name="name" value="<%= posts.name %>" />
            </p>
 
            <p>
-           <label>Author</label>
+           <label><h2>Author</h2></label>
            <input type="text" id="author" name="author" value="<%= posts.author %>" />
            </p>
 
            <p>
-           <label>Category</label>
+           <label><h2>Category</h2></label>
            <input type="text" id="category" name="category" value="<%= posts.category %>" />
            </p>
-
+         </div>
+         <div class="col-lg-2 col-md-6">
            <p>
-           <label>Content</label>
-           <textarea type="text" id="content" name="content" rows="15" cols="100" value="<%= posts.content %>"><%= posts.content %></textarea>
-           </p>
-
-           <p>
-           <label>Thumbnail Image</label>
+           <label><h2>Image</h2></label>
            <input type="text" id="image" name="image" value="<%= posts.image %>" />
            </p>
 
            <p>
-           <label>Date</label>
+           <label><h2>Date</h2></label>
            <input type="date" id="date" name="date" value="<%= posts.date %>" />
            </p>
 
            <p>
-           <label>Slug</label>
+           <label><h2>Slug</h2></label>
            <input type="text" id="link" name="link" value="<%= posts.link %>" />
            </p>
-
-           <button class="btn btn-success">Update</button>
+         </div>
+         <div class="col-lg-8 col-md-12">
+           <p>
+           <label><h2>Content</h2></label>
+           <textarea type="text" id="content" name="content" rows="15" cols="100" value="<%= posts.content %>"><%= posts.content %></textarea>
+           </p>
+         </div>
 
        </form>
+       <button class="btn btn-success">Update</button>
+       <a href="/posts/delete/<%= posts.link %>"><button class="btn btn-danger">Delete</button></a>
+       <a href="/posts"><button class="btn btn-primary">Cancel</button></a>
      </div>
      </div>
      </div>
-  <script src="/js/form.js"></script>
 </body>
 </html>

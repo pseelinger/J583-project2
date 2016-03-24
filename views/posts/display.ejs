@@ -4,13 +4,14 @@
   <title><%= posts.name %></title>
   <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="/css/general.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
         <h1><%= posts.name %></h1>
-        <h2>By <%= posts.author %> <%= posts.date %></h2>
+        <p class="byline">By <%= posts.author %> <%= posts.date %></p>
       </div>
     </div>
     <div class="row">
