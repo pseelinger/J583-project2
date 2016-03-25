@@ -64,7 +64,7 @@ input[type=date]{
 }
 /* Mobile Menu */
 .wrapper {
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 .nav-side {
@@ -85,41 +85,46 @@ input[type=date]{
 
 .nav-side.nav-open {
   margin-right: 0;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  padding-top: 15px;
 }
 
 .nav-toggle {
   position: absolute;
-  left: -40px;
+  left: -75px;
   top: 0;
   width: 40px;
   height: 40px;
-  background-color: cornflowerblue;
+  background-color: white;
   text-decoration: none !important;
   text-align: center;
-  border-bottom-right-radius: 3px;
-  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  font-size: 2em;
+  font-size: 2.75em;
+  margin-top: 15px;
+  transition: background-color .5s;
+  margin-right: 20px;
 }
 
 .nav-toggle:before {
   content: "\2630";
   font-weight: 600;
-  color: white;
+  color: cornflowerblue;
   line-height: 40px;
   text-decoration: none;
 }
-
 .nav-side.nav-open .nav-toggle:before {
   content: "\274C";
   text-decoration: none;
+  color: white;
+  background-color: cornflowerblue;
+  padding: 10px;
+  padding-top: 21px;
+  padding-right: 40px;
+  margin-left: -9px;
 }
 #nav_ul li a{
-  color: white !important;
+  color: white;
   font-size: 1.5em;
-  border-bottom: 1px solid white;
   padding: 5px;
   width: 100%;
   text-decoration: none;
@@ -127,4 +132,22 @@ input[type=date]{
 }
 #nav_ul{
   list-style-type: none;
+}
+#nav_ul li{
+  padding: 10px;
+  border-bottom: 1px solid white;
+  text-align: right;
+}
+#nav_ul li:hover{
+  background-color: white;
+  transition: background-color 1s;
+}
+.header img{
+  height: 12vh;
+  max-height: 100px;
+  padding-right: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 998;
+  top: 0;
 }

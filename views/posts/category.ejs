@@ -10,13 +10,16 @@
   <script src="/js/jquery-min.js"></script>
 </head>
 <body>
+  <div class="header">
+    <img src="/img/paper.png">
   <nav class="nav-side">
      <ul id="nav_ul">
-       <li><a href='/'>Posts</a></li>
-       <li><a href="/post/new">New Post</a></li>
+       <li class="menu-item"><a id="menu-link-1" href='/' onmouseover="highlight('menu-link-1')" onmouseout="unhighlight('menu-link-1')">Posts</a></li>
+       <li class="menu-item"><a id="menu-link-2" href="/post/new" onmouseover="highlight('menu-link-2')" onmouseout="unhighlight('menu-link-2')">New Post</a></li>
      </ul>
      <a href="#" class="nav-toggle"></a>
    </nav>
+ </div>
    <div class="wrapper">
   <div class="container-fluid">
     <div class="row">
@@ -28,13 +31,11 @@
       <tr>
         <th>Post Name</th>
         <th>Date</th>
-        <th>Edit</th>
       </tr>
       <% for(var j in posts){  %>
         <tr>
-          <td><a href="/posts/<%= posts[j].link %> "><%= posts[j].name %></a></td>
+          <td><a href="/posts/<%= posts[j].link %> "><%= posts[j].name %></a><a class="edit" href="/posts/edit/<%= posts[j].link %>">(Edit)</a></td>
           <td><%= posts[j].date %></td>
-          <td><a href="/posts/edit/<%= posts[j].link %>">Edit</a></td>
         </tr>
         <% } %>
         <% }else{ %>
@@ -43,7 +44,7 @@
     </table>
   </div>
   </div>
-    <a class="create" href="/post/new"><button class="btn btn-primary">Create new post</button></a>
+    <div class="center"><a href="/post/new"><button class="btn btn-primary">Create new post</button></a></div>
   </div>
 </div>
   <script src="/js/bootstrap.min.js"></script>

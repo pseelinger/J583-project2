@@ -10,13 +10,16 @@
   <script src="/js/jquery-min.js"></script>
 </head>
 <body>
+  <div class="header">
+    <img src="/img/paper.png">
   <nav class="nav-side">
      <ul id="nav_ul">
-       <li><a href='/'>Posts</a></li>
-       <li><a href="/post/new">New Post</a></li>
+       <li class="menu-item"><a id="menu-link-1" href='/' onmouseover="highlight('menu-link-1')" onmouseout="unhighlight('menu-link-1')">Posts</a></li>
+       <li class="menu-item"><a id="menu-link-2" href="/post/new" onmouseover="highlight('menu-link-2')" onmouseout="unhighlight('menu-link-2')">New Post</a></li>
      </ul>
      <a href="#" class="nav-toggle"></a>
    </nav>
+ </div>
    <div class="wrapper">
   <div class="container-fluid">
     <div class="row">
@@ -26,33 +29,38 @@
          <div class="col-lg-3 col-md-6">
            <p>
            <label><h2>Post Name</h2></label>
-           <input type="text" id="name" name="name" value="<%= posts.name %>" />
+           <p class="byline">Required</p>
+           <input type="text" id="name" name="name" value="<%= posts.name %>" required/>
            </p>
 
            <p>
            <label><h2>Author</h2></label>
-           <input type="text" id="author" name="author" value="<%= posts.author %>" />
+           <p class="byline">Required</p>
+           <input type="text" id="author" name="author" value="<%= posts.author %>" required />
            </p>
 
            <p>
            <label><h2>Category</h2></label>
-           <input type="text" id="category" name="category" value="<%= posts.category %>" />
+           <input type="text" id="category" name="category" value="<%= posts.category %>"/>
            </p>
          </div>
          <div class="col-lg-3 col-md-6">
            <p>
            <label><h2>Image</h2></label>
-           <input type="text" id="image" name="image" value="<%= posts.image %>" />
+           <p class="byline">Please enter a URL.</p>
+           <input type="url" id="image" name="image" value="<%= posts.image %>" />
            </p>
 
            <p>
            <label><h2>Date</h2></label>
-           <input type="date" id="date" name="date" value="<%= posts.date %>" />
+           <p class="byline">Required</p>
+           <input type="date" id="date" name="date" value="<%= posts.date %>" required/>
            </p>
 
            <p>
            <label><h2>Slug</h2></label>
-           <input type="text" id="link" name="link" value="<%= posts.link %>" />
+           <p class="byline">Required. This is what will show up at the end of your post's URL.</p>
+           <input type="text" id="link" name="link" value="<%= posts.link %>" required/>
            </p>
          </div>
          <div class="col-lg-6 col-md-12">

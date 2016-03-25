@@ -5,8 +5,22 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="/css/general.css" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/js/jquery-min.js"></script>
 </head>
 <body>
+  <div class="header">
+    <img src="/img/paper.png">
+  <nav class="nav-side">
+     <ul id="nav_ul">
+       <li class="menu-item"><a id="menu-link-1" href='/' onmouseover="highlight('menu-link-1')" onmouseout="unhighlight('menu-link-1')">Posts</a></li>
+       <li class="menu-item"><a id="menu-link-2" href="/posts/edit/<%= posts.link %>" onmouseover="highlight('menu-link-2')" onmouseout="unhighlight('menu-link-2')">Edit Post</a></li>
+       <li class="menu-item"><a id="menu-link-3" href="/post/new" onmouseover="highlight('menu-link-3')" onmouseout="unhighlight('menu-link-3')" href="/post/new">New Post</a></li>
+     </ul>
+     <a href="#" class="nav-toggle"></a>
+   </nav>
+ </div>
+   <div class="wrapper">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
@@ -24,5 +38,7 @@
       </div>
     </div>
 </div>
+</div>
+  <script src="/js/menu.js"></script>
 </body>
 </html>

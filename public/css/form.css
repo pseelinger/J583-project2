@@ -1,18 +1,15 @@
 body{
   margin-bottom: 25px;
 }
-input[type = "text"], input[type="textarea"], input[type = "date"], textarea{
+input[type = "text"], input[type="textarea"], input[type = "date"], input[type = "url"], textarea{
   width: 100%;
   border: 1px solid black;
   font-size: 1.5em;
   padding: 0 5px 0 5px;
 }
-.dropdown{
-  transition: display 2s;
-}
 .dropdown button{
   margin: 10px 0 10px 0;
-  font-family: "Roman Serif";
+  font-family: Tahoma;
   font-weight: bold;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
