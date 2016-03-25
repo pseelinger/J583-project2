@@ -34,7 +34,8 @@
     <input type="text" id="author" name="author" value="" required/>
 
     <label><h2>Category</h2></label>
-    <input type="text" id="category" name="category" value="" />
+    <p class="byline">No special characters except "-" and "_" allowed.</p>
+    <input type="text" id="category" name="category" value="" pattern="^[a-zA-Z0-9_-]*$"/>
   </div>
   <div class="col-lg-3 col-md-6">
     <label><h2>Image</h2></label>
@@ -46,8 +47,8 @@
     <input type="date" id="date" name="date" value="" required />
 
     <label><h2>Slug</h2></label>
-    <p class="byline">Required. This is what will show up at the end of your post's URL.</p>
-    <input type="text" id="link" name="link" value="" required/>
+    <p class="byline">Required. This is what will show up at the end of your post's URL. No special characters except "-" and "_" allowed.</p>
+    <input type="text" id="link" name="link" value="" pattern="^[a-zA-Z0-9_-]*$" required/>
   </div>
   <div class="col-lg-6 col-md-12">
     <label><h2>Content</h2></label>

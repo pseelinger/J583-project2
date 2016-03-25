@@ -41,7 +41,8 @@
 
            <p>
            <label><h2>Category</h2></label>
-           <input type="text" id="category" name="category" value="<%= posts.category %>"/>
+           <p class="byline">No special characters except "-" and "_" allowed.</p>
+           <input type="text" id="category" name="category" value="<%= posts.category %>" pattern="^[a-zA-Z0-9_-]*$"/>
            </p>
          </div>
          <div class="col-lg-3 col-md-6">
@@ -59,8 +60,8 @@
 
            <p>
            <label><h2>Slug</h2></label>
-           <p class="byline">Required. This is what will show up at the end of your post's URL.</p>
-           <input type="text" id="link" name="link" value="<%= posts.link %>" required/>
+           <p class="byline">Required. This is what will show up at the end of your post's URL. No special characters except "-" and "_" allowed.</p>
+           <input type="text" id="link" name="link" value="<%= posts.link %>" required pattern="^[a-zA-Z0-9_-]*$"/>
            </p>
          </div>
          <div class="col-lg-6 col-md-12">
