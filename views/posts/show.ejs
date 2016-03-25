@@ -3,7 +3,9 @@
 <head>
   <title>Posts</title>
   <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/css/general.css" type="text/css" />
+  <link rel="stylesheet" href="/css/form.css" type="text/css" />
 </head>
 <body>
   <div class="container-fluid">
@@ -46,14 +48,17 @@
          <div class="col-lg-8 col-md-12">
            <p>
            <label><h2>Content</h2></label>
-           <textarea type="text" id="content" name="content" rows="15" cols="100" value="<%= posts.content %>"><%= posts.content %></textarea>
+           <textarea type="text" id="content" name="content" rows="15" value="<%= posts.content %>"><%= posts.content %></textarea>
            </p>
          </div>
-
+         <div class="col-md-12">
+         <button class="btn btn-success">Update</button>
+         <a class="btn btn-danger" href="/posts/delete/<%= posts.link %>">Delete</a>
+         <a class="btn btn-primary" href="/">Cancel</a>
+       </div>
        </form>
-       <button class="btn btn-success">Update</button>
-       <a href="/posts/delete/<%= posts.link %>"><button class="btn btn-danger">Delete</button></a>
-       <a href="/posts"><button class="btn btn-primary">Cancel</button></a>
+
+
      </div>
      </div>
      </div>

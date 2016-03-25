@@ -32,7 +32,7 @@ exports.update = function(req, res) {
         }
     );
 
-    res.redirect('/posts');
+    res.redirect('/');
 };
 exports.form = function(req, res){
   res.render('posts/form');
@@ -48,7 +48,7 @@ exports.create = function(req, res){
     date: req.body.date ,
     link: req.body.link
   });
-  res.redirect('/posts');
+  res.redirect('/');
 };
 exports.remove = function(req, res) {
     var collection = db.get().collection('posts');
@@ -58,7 +58,7 @@ exports.remove = function(req, res) {
         link: req.params.id
     });
 
-    return res.redirect('/posts');
+    return res.redirect('/');
 };
 exports.display = function(req, res){
   var collection = db.get().collection('posts');
@@ -69,7 +69,8 @@ exports.display = function(req, res){
 };
 
 exports.categories = function(req, res){
+  var collection = db.get().collection('posts');
   collection.find({"category": req.params.id}).toArray(function(err, results){
-    res.render('posts/list', {posts: results});
+    res.render('posts/category', {posts: results});
   });
 };

@@ -1,0 +1,12 @@
+body{
+  margin-bottom: 25px;
+}
+input[type = "text"], input[type="textarea"], input[type = "date"], textarea{
+  width: 100%;
+  border: 1px solid black;
+  font-size: 1.5em;
+  padding: 0 5px 0 5px;
+}
+.dropdown{
+  margin: 10px 0 10px 0;
+}

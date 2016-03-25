@@ -3,40 +3,57 @@
 <head>
   <title>Create a Post</title>
   <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/css/general.css" type="text/css" />
+  <link rel="stylesheet" href="/css/form.css" type="text/css" />
 </head>
 <body>
+  <div class="container-fluid">
 <h1>Create New Post</h1>
 <form method = "POST" action = "/posts">
-  <p>
-    <label>Post Name</label>
-    <input type = "text" name ="name" id="name" value = "" />
-  </p>
-  <p>
-    <label>Post Author</label>
-    <input type = "text" name ="author" id="author" value = "" />
-  </p>
-  <p>
-    <label>Post Category</label>
-    <input type = "text" name ="category" id="category" value = "" />
-  </p>
-  <p>
-    <label>Content</label>
-    <input type = "text" name ="content" id="content" value = "" />
-  </p>
-  <p>
-    <label>Thumbnail Image</label>
-    <input type = "file" name ="image" id="image" value = "" />
-  </p>
-  <p>
-    <label>Date</label>
-    <input type = "date" name ="date" id="date" value = "" />
-  </p>
-  <p>
-    <label>Slug</label>
-    <input type = "text" name ="link" id="link" value = "" />
-  </p>
-  <button>Create Post</button>
+  <div class="col-lg-2 col-md-6">
+    <p>
+    <label><h2>Post Name</h2></label>
+    <input type="text" id="name" name="name" value="" />
+    </p>
+
+    <p>
+    <label><h2>Author</h2></label>
+    <input type="text" id="author" name="author" value="" />
+    </p>
+
+    <p>
+    <label><h2>Category</h2></label>
+    <input type="text" id="category" name="category" value="" />
+    </p>
+  </div>
+  <div class="col-lg-2 col-md-6">
+    <p>
+    <label><h2>Image</h2></label>
+    <input type="text" id="image" name="image" value="" />
+    </p>
+
+    <p>
+    <label><h2>Date</h2></label>
+    <input type="date" id="date" name="date" value="" />
+    </p>
+
+    <p>
+    <label><h2>Slug</h2></label>
+    <input type="text" id="link" name="link" value="" />
+    </p>
+  </div>
+  <div class="col-lg-8 col-md-12">
+    <p>
+    <label><h2>Content</h2></label>
+    <textarea type="text" id="content" name="content" rows="15" cols="75" value=""></textarea>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <button class="btn btn-success">Create Post</button>
+    <a class="btn btn-primary" href="/">Cancel</a>
+  </div>
 </form>
+</div>
 </body>
 </html>
