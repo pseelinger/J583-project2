@@ -10,7 +10,14 @@
   <script src="/js/jquery-min.js"></script>
 </head>
 <body>
-  <% var cats = []; %>
+  <nav class="nav-side">
+     <ul id="nav_ul">
+       <li><a href='/'>Posts</a></li>
+       <li><a href="/post/new">New Post</a></li>
+     </ul>
+     <a href="#" class="nav-toggle"></a>
+   </nav>
+   <div class="wrapper">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
@@ -36,8 +43,10 @@
     </table>
   </div>
   </div>
-    <a href="/post/new"><button class="btn btn-primary">Create new post</button></a>
+    <a class="create" href="/post/new"><button class="btn btn-primary">Create new post</button></a>
   </div>
+</div>
   <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/menu.js"></script>
 </body>
 </html>

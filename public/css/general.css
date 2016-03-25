@@ -20,10 +20,11 @@ h1{
 h2{
   font-family: "Roman Serif";
   font-size: 2.25em;
+  font-weight: 500;
 
 }
 .byline{
-  font-size: 1em;
+  font-size: 1.1em;
   font-family: "Roman Serif";
 }
 button a, button a:hover{
@@ -50,6 +51,7 @@ pre{
   white-space: pre-line;
   word-break: normal;
   line-height: 1.5;
+  margin-top: 10px;
 }
 input[type=date]{
   line-height: normal;
@@ -59,4 +61,70 @@ input[type=date]{
   max-width: 750px;
   left: 0;
   right: 0;
+}
+/* Mobile Menu */
+.wrapper {
+  margin-top: 50px;
+}
+
+.nav-side {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 250px;
+  background-color: cornflowerblue;
+  box-sizing: border-box;
+  padding: 20px;
+  color: white;
+  margin-right: -250px;
+  transition: margin 200ms ease-in-out;
+  z-index: 999;
+}
+
+.nav-side.nav-open {
+  margin-right: 0;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.nav-toggle {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: cornflowerblue;
+  text-decoration: none !important;
+  text-align: center;
+  border-bottom-right-radius: 3px;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  font-size: 2em;
+}
+
+.nav-toggle:before {
+  content: "\2630";
+  font-weight: 600;
+  color: white;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.nav-side.nav-open .nav-toggle:before {
+  content: "\274C";
+  text-decoration: none;
+}
+#nav_ul li a{
+  color: white !important;
+  font-size: 1.5em;
+  border-bottom: 1px solid white;
+  padding: 5px;
+  width: 100%;
+  text-decoration: none;
+  margin-top: 10px;
+}
+#nav_ul{
+  list-style-type: none;
 }

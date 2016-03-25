@@ -8,5 +8,31 @@ input[type = "text"], input[type="textarea"], input[type = "date"], textarea{
   padding: 0 5px 0 5px;
 }
 .dropdown{
+  transition: display 2s;
+}
+.dropdown button{
   margin: 10px 0 10px 0;
+  font-family: "Roman Serif";
+  font-weight: bold;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.dropdown ul{
+  margin-top: -10px;
+  z-index: 99;
+  border-radius: 0;
+}
+.btn{
+  font-size: 1.25em !important;
+  font-family: "Lemon Milk";
+}
+.center{
+  margin:auto;
+  width: 20%;
+  padding: 10px;
+  align-items: center;
+}
+.edit{
+  margin-left: 10px;
+  font-weight: bold;
 }
