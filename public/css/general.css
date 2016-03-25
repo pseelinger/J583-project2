@@ -6,6 +6,9 @@
   font-family: "Roman Serif";
   src: url(/fonts/romanserif.ttf);
 }
+html, body{
+  height: 100%;
+}
 body{
   background-color: #eeeeee
 }
@@ -65,8 +68,12 @@ input[type=date]{
 /* Mobile Menu */
 .wrapper {
   margin-top: 90px;
+  margin-bottom: 100px !important;
 }
-
+.wrapper:after{
+  content: "";
+display: block;
+}
 .nav-side {
   position: fixed;
   right: 0;
@@ -77,7 +84,7 @@ input[type=date]{
   background-color: cornflowerblue;
   box-sizing: border-box;
   padding: 20px;
-  color: white;
+  color: white !important;
   margin-right: -250px;
   transition: margin 200ms ease-in-out;
   z-index: 999;
@@ -122,13 +129,11 @@ input[type=date]{
   padding-right: 40px;
   margin-left: -9px;
 }
-#nav_ul li a{
-  color: white;
+.menu-item, .menu-item:hover{
   font-size: 1.5em;
-  padding: 5px;
-  width: 100%;
+}
+#nav_ul a{
   text-decoration: none;
-  margin-top: 10px;
 }
 #nav_ul{
   list-style-type: none;
@@ -150,4 +155,20 @@ input[type=date]{
   background-color: white;
   z-index: 998;
   top: 0;
+}
+#footer{
+  background-color: white;
+  width: 100vw;
+  font-family: "Roman Serif";
+  height: 75px;
+  bottom: 0;
+  position: fixed;
+}
+#footer img{
+  bottom: 0;
+  left: 0;
+  height: 75px;
+}
+#footer a{
+  margin-right: 10px;
 }

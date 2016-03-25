@@ -8,3 +8,10 @@ function highlight(link){
 function unhighlight(link){
   document.getElementById(link).style.color = 'white';
 }
+//Word Counter for Textarea
+$(document).ready(function() {
+  $("#content").on('keyup', function() {
+    var words = this.value.match(/\S+/g).length;
+    $("#word-count").text(words);
+  });
+});
