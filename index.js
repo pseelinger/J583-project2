@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 
 var db = require('./config/db');
 var posts = require('./controllers/posts')
+var url = process.env.MONGOLAB_URI;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -24,9 +25,9 @@ app.get('/posts/delete/:id', posts.remove);
 //Post's Page on Site
 app.get('/posts/:id', posts.display);
 // Connect to the MongoDB database
-db.connect('mongodb://localhost:27017/test', function(){
+db.connect(url, function(){
   console.log("MongoDB Connected");
-  app.listen(8080, function(){
+  app.listen(process.env.PORT || 8080, function(){
     console.log("Express server started");
   });
 });
